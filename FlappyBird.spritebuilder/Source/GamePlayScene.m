@@ -8,6 +8,7 @@
 {
     // your code here
     [self addObstacle];
+    [physicsNode addChild:character];
     timeSinceObstacle = 0.0f;
 }
 
@@ -17,7 +18,7 @@
 {
     // put update code here
     character = (Character*)[CCBReader load:@"Character"];
-    //[physicsNode addChild:character];
+    
     // Increment the time since the last obstacle was added
     timeSinceObstacle += delta; // delta is approximately 1/60th of a second
     
